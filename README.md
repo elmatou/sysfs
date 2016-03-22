@@ -1,8 +1,9 @@
 # sysfs
 
-The sysfs driver library for PiPiper for use with the Raspberry Pi and the PiPiper library.
+The `sysfs` driver for PiPiper that use the standard [linux kernel GPIO driver](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt).
 
-Based on Lunix GPIO Kernel. [https://www.kernel.org/doc/Documentation/gpio/sysfs.txt]
+Currently support only `PiPiper::Pin` objects.
+Could support `PiPiper::SPI` object too, if anyone is willing to contribute
 
 ## Installation
 
@@ -21,8 +22,13 @@ Or install it yourself as:
     $ gem install pi_piper-sysfs
 
 ## Usage
-
-TODO: Write usage instructions here
+Just load the gem after PiPiper
+```ruby
+gem 'pi_piper'
+gem 'pi_piper-sysfs'
+```
+and every thing works out of the box.
+NOTE : this is a driver for `PiPiper` even if you can use it without, `PiPiper` will be added as a dependency.
 
 ## Development
 
@@ -38,5 +44,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/pipipe
 ## License
 
 The gem is available as open source under the terms of the [BSD License](http://opensource.org/licenses/BSD).
-
-
